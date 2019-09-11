@@ -1,33 +1,86 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  background: #00f;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background: #f0f;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  background: #f00;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.filterlist {
+  background: #0f0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* overflow: auto doesn't work */
+
+.filterlist__filter {
+  height: 30px;
+  width: 100px;
+  background: #ff0;
+}
+
+.kioskslist {
+  background: #00ffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-top: 15px;
+}
+
+.kiosk {
+  background: #ff0;
+  height: 100px;
+  margin-bottom: 5px;
+  padding: 10px;
+  min-width: 300px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-column-gap: 10px;
+}
+
+.kiosk__image {
+  background: url(https://live.staticflickr.com/5726/30038228436_7728b84b2d_b.jpg)
+    no-repeat center center;
+  background-size: cover;
+}
+
+.kiosk__name {
+  margin: 0;
+}
+
+.kiosk__description {
+  margin: 0;
+}
+
+@media screen and (min-width: 600px) {
+  .kiosk {
+    margin: 10px 10px;
   }
 }

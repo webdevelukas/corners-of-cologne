@@ -1,7 +1,7 @@
 import React from "react";
 
 function Filter() {
-  return <div>Filter</div>;
+  return <div className="filterlist__filter">Filtername</div>;
 }
 
 export default Filter;
