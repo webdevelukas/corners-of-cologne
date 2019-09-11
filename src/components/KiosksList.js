@@ -3,9 +3,12 @@ import Kiosk from "./Kiosk";
 
 function KiosksList() {
   return (
-    <div>
-      KiosksList <Kiosk />
-    </div>
+    <section className="kioskslist">
+      <Kiosk />
+      <Kiosk />
+      <Kiosk />
+      <Kiosk />
+    </section>
   );
 }
 
