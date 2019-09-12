@@ -1,11 +1,11 @@
 export const filters = [
   {
     name: "distance",
-    options: ["short", "middle", "long"]
+    options: ["< 2 min", "< 5 min", "< 10 min"]
   },
   {
     name: "rating",
-    options: ["rating = 4-5", "rating = 3-4", "rating = 2-3", "rating = 1-2"]
+    options: ["*****", "****", "***", "**", "*"]
   },
   {
     name: "category",
