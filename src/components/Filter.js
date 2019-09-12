@@ -1,7 +1,13 @@
 import React from "react";
 
 function Filter() {
-  return <div className="filterlist__filter">Filtername</div>;
+  return (
+    <select className="filterlist__filter">
+      <option autofocus>Filtername</option>
+      <option autofocus>Filtername</option>
+      <option autofocus>Filtername</option>
+    </select>
+  );
 }
 
 export default Filter;

@@ -5,7 +5,7 @@
 }
 
 body {
-  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .App {
@@ -17,10 +17,16 @@ body {
 }
 
 .header {
-  background: #f0f;
+  background: #f20530;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header__logo {
+  font-family: "Faster One", cursive;
+  font-size: 1.5em;
+  color: #fff;
 }
 
 .main {
@@ -30,10 +36,12 @@ body {
 }
 
 .filterlist {
-  background: #0f0;
-  display: flex;
-  justify-content: space-around;
+  background: #eee;
+  display: inline-flex;
   align-items: center;
+  overflow-x: auto;
+  padding: 0 10px;
+  color: #555;
 }
 
 /* overflow: auto doesn't work */
@@ -41,7 +49,9 @@ body {
 .filterlist__filter {
   height: 30px;
   width: 100px;
-  background: #ff0;
+  font-size: 0.8em;
+  color: #555;
+  margin-left: 1em;
 }
 
 .kioskslist {
@@ -72,15 +82,20 @@ body {
 }
 
 .kiosk__name {
-  margin: 0;
+  margin: 0 0 0.4em;
 }
 
 .kiosk__description {
   margin: 0;
+  font-size: 0.8em;
 }
 
 @media screen and (min-width: 600px) {
   .kiosk {
+    height: 350px;
     margin: 10px 10px;
+    grid-template-rows: 150px 200px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
   }
 }
