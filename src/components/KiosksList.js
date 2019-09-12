@@ -6,7 +6,7 @@ function KiosksList() {
   return (
     <section className="kioskslist">
       {kiosks.map(kiosk => {
-        return <Kiosk kiosk={kiosk} />;
+        return <Kiosk key={kiosk.title} kiosk={kiosk} />;
       })}
     </section>
   );

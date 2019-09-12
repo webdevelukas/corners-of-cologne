@@ -1,11 +1,13 @@
 import React from "react";
 
-function Filter() {
+function Filter(props) {
+  const filterOptions = props.filter.options;
   return (
     <select className="filterlist__filter">
-      <option autofocus>Filtername 1</option>
-      <option autofocus>Filtername 2</option>
-      <option autofocus>Filtername 3</option>
+      <option>{props.filter.name}</option>
+      {filterOptions.map(option => {
+        return <option value={option}>{option}</option>;
+      })}
     </select>
   );
 }

@@ -65,7 +65,8 @@ body {
 
 .kiosk {
   background: #ff0;
-  height: 100px;
+  height: auto;
+  min-height: 100px;
   margin-bottom: 5px;
   padding: 10px;
   min-width: 300px;
@@ -99,17 +100,12 @@ body {
     grid-template-columns: 1fr;
     grid-row-gap: 10px;
     flex-grow: 1;
-    flex-basis: 60%;
+    flex-basis: 40%;
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
   .kiosk {
-    height: 350px;
-    margin: 10px 10px;
-    grid-template-rows: 150px 200px;
-    grid-template-columns: 1fr;
-    grid-row-gap: 10px;
     flex-basis: 30%;
   }
 }
