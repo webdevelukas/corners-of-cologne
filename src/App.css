@@ -44,8 +44,6 @@ body {
   color: #555;
 }
 
-/* overflow: auto doesn't work */
-
 .filterlist__filter {
   height: 30px;
   width: 100px;
@@ -55,7 +53,7 @@ body {
 }
 
 .kioskslist {
-  background: #00ffff;
+  background: #0dd;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -92,15 +90,42 @@ body {
   font-size: 0.8em;
 }
 
+.kiosk__attributes {
+  display: flex;
+  font-size: 0.8em;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.kiosk__categories {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.kiosk__categories > li {
+  background: #f00;
+  padding: 0.8em;
+  color: white;
+  border-radius: 0.2em;
+  font-size: 0.8em;
+  margin-right: 1em;
+}
+
 @media screen and (min-width: 600px) {
   .kiosk {
-    height: 350px;
+    height: auto;
     margin: 10px 10px;
-    grid-template-rows: 150px 200px;
+    grid-template-rows: 250px auto;
     grid-template-columns: 1fr;
     grid-row-gap: 10px;
     flex-grow: 1;
     flex-basis: 40%;
+  }
+
+  .filterlist {
+    justify-content: center;
   }
 }
 

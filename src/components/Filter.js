@@ -1,11 +1,10 @@
 import React from "react";
 
 function Filter(props) {
-  const filterOptions = props.filter.options;
   return (
     <select className="filterlist__filter">
       <option>{props.filter.name}</option>
-      {filterOptions.map(option => {
+      {props.filter.options.map(option => {
         return (
           <option key={option} value={option}>
             {option}
