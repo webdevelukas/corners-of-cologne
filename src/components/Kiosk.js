@@ -1,14 +1,16 @@
 import React from "react";
 
-function Kiosk() {
+function Kiosk(props) {
   return (
     <article className="kiosk">
-      <div className="kiosk__image"></div>
+      <img
+        className="kiosk__image"
+        src={props.kiosk.imgSrc}
+        alt="kiosk from outside"
+      />
       <div>
-        <h3 className="kiosk__name">Dreikönigen-Büdchen</h3>
-        <p className="kiosk__description">
-          Ecke Anno-/Dreikönigenstraße, tgl. 6-23 Uhr
-        </p>
+        <h3 className="kiosk__title">{props.kiosk.title}</h3>
+        <p className="kiosk__description">{props.kiosk.description}</p>
       </div>
     </article>
   );
