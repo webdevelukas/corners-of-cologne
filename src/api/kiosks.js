@@ -12,7 +12,7 @@ export const kiosks = [
     imgSrc:
       "http://www.ambuedche.de/wp-content/uploads/2016/04/buedchen-auerbachplatz-koeln-suelz.jpg",
     title: "Büdchen am Auerbachplatz",
-    categories: ["kölsch"],
+    categories: ["kölsch", "bavarian"],
     distance: 23,
     rating: 2.8,
     price: 3.6,
@@ -23,7 +23,7 @@ export const kiosks = [
     imgSrc:
       "http://www.ambuedche.de/wp-content/uploads/2015/09/AM-BUEDCHE-Fotos-von-Buedchen-in-Koeln-14.jpg",
     title: "Kiosk Buke",
-    categories: ["alt"],
+    categories: ["alt", "international"],
     distance: 14,
     rating: 3.7,
     price: 2.6,
