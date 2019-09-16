@@ -25,9 +25,7 @@ function Kiosk(props) {
           </p>
         </div>
         {props.kiosk.categories.map(category => {
-          return (
-            <CategoriesBadges key={props.kiosk.title} category={category} />
-          );
+          return <CategoriesBadges category={category} />;
         })}
       </div>
     </article>
