@@ -1,30 +1,30 @@
 import React from "react";
 import CategoriesBadges from "./CategoriesBadges";
 
-function Kiosk(props) {
+function Kiosk({ kiosk }) {
   return (
     <article className="kiosk">
       <img
         className="kiosk__image"
-        src={props.kiosk.imgSrc}
+        src={kiosk.imgSrc}
         alt="kiosk from outside"
       />
       <div>
-        <h3 className="kiosk__title">{props.kiosk.title}</h3>
-        <p className="kiosk__description">{props.kiosk.description}</p>
+        <h3 className="kiosk__title">{kiosk.title}</h3>
+        <p className="kiosk__description">{kiosk.description}</p>
 
         <div className="kiosk__attributes">
           <p>
-            <i class="fas fa-star"></i> {props.kiosk.rating}
+            <i class="fas fa-star"></i> {kiosk.rating}
           </p>
           <p>
-            <i class="fas fa-beer"></i> {props.kiosk.price} €
+            <i class="fas fa-beer"></i> {kiosk.price} €
           </p>
           <p>
-            <i class="fas fa-walking"></i> {props.kiosk.distance} min.
+            <i class="fas fa-walking"></i> {kiosk.distance} min.
           </p>
         </div>
-        {props.kiosk.categories.map(category => {
+        {kiosk.categories.map(category => {
           return <CategoriesBadges key={category} category={category} />;
         })}
       </div>

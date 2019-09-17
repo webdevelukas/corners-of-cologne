@@ -2,7 +2,7 @@ import React from "react";
 import Kiosk from "./Kiosk";
 import { kiosks } from "../api/kiosks";
 
-function KiosksList({ selectedFilters, onFilterChange }) {
+function KiosksList({ selectedFilters }) {
   console.log(selectedFilters);
   const filteredKiosks = kiosks.filter(kiosk => {
     // Filter distance
@@ -77,9 +77,7 @@ function KiosksList({ selectedFilters, onFilterChange }) {
   return (
     <section className="kioskslist">
       {filteredKiosks.map(kiosk => {
-        return (
-          <Kiosk key={kiosk.title} kiosk={kiosk} onChange={onFilterChange} />
-        );
+        return <Kiosk key={kiosk.title} kiosk={kiosk} />;
       })}
     </section>
   );

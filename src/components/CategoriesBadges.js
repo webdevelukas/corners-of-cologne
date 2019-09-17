@@ -1,9 +1,9 @@
 import React from "react";
 
-function CategoriesBadges(props) {
+function CategoriesBadges({ category }) {
   return (
     <ul className="kiosk__categories">
-      <li>{props.category}</li>
+      <li>{category}</li>
     </ul>
   );
 }
