@@ -8,10 +8,6 @@ function App() {
   const [filters, setFilters] = React.useState({});
 
   function handleFilterChange(name, value) {
-    /* const newFilter = {
-      name: name,
-      value: value
-    }; */
     // Create a copy of filters object
     const newFilters = { ...filters };
     newFilters[name] = value;
