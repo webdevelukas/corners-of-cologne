@@ -1,9 +1,17 @@
 import React from "react";
+import styled from "styled-components";
+
+const FilterListSelect = styled.select`
+  height: 30px;
+  width: 100px;
+  font-size: 0.8em;
+  color: #555;
+  margin-left: 1em;
+`;
 
 function Filter({ onChange, filter, selectedValue }) {
   return (
-    <select
-      className="filterlist__filter"
+    <FilterListSelect
       onChange={event => {
         onChange(filter.name, event.target.value);
       }}
@@ -17,7 +25,7 @@ function Filter({ onChange, filter, selectedValue }) {
           </option>
         );
       })}
-    </select>
+    </FilterListSelect>
   );
 }
 
