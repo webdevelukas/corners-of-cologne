@@ -24,15 +24,11 @@ function KiosksList({ selectedFilters }) {
           }
           break;
         default:
-          return selectedFilters;
       }
     }
 
     // Filter rating
     if (selectedFilters.rating) {
-      if (selectedFilters.rating === "rating") {
-        return selectedFilters;
-      }
       if (kiosk.rating <= selectedFilters.rating.length) {
         return false;
       }
@@ -40,9 +36,6 @@ function KiosksList({ selectedFilters }) {
 
     // Filter category
     if (selectedFilters.category) {
-      if (selectedFilters.category === "category") {
-        return selectedFilters;
-      }
       if (!kiosk.categories.includes(selectedFilters.category)) {
         return false;
       }
@@ -62,12 +55,11 @@ function KiosksList({ selectedFilters }) {
           }
           break;
         case "high":
-          if (kiosk.price < 2.2) {
+          if (kiosk.price <= 0) {
             return false;
           }
           break;
         default:
-          return selectedFilters;
       }
     }
 
