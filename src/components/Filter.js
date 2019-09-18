@@ -8,7 +8,7 @@ function Filter({ onChange, filter }) {
         onChange(filter.name, event.target.value);
       }}
     >
-      <option>{filter.name}</option>
+      <option value="">{filter.name}</option>
       {filter.options.map(option => {
         return (
           <option key={option} value={option}>
