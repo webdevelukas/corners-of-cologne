@@ -5,7 +5,9 @@ import FilterList from "./components/FilterList";
 import KiosksList from "./components/KiosksList";
 
 function App() {
-  const [filters, setFilters] = React.useState({});
+  const [filters, setFilters] = React.useState({
+    category: "kölsch"
+  });
 
   function handleFilterChange(name, value) {
     // Create a copy of filters object
@@ -22,7 +24,10 @@ function App() {
     <div className="App">
       <Header />
       <main className="main">
-        <FilterList onFilterChange={handleFilterChange} />
+        <FilterList
+          selectedFilters={filters}
+          onFilterChange={handleFilterChange}
+        />
         <KiosksList
           selectedFilters={filters}
           onFilterChange={handleFilterChange}
