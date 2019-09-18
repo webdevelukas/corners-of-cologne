@@ -8,7 +8,8 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "PORT=3333 react-scripts start --no-cache",

@@ -1,13 +1,26 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header";
+import Title from "./components/Title";
 import FilterList from "./components/FilterList";
 import KiosksList from "./components/KiosksList";
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  background: #00f;
+`;
+
+const Main = styled.main`
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  background: #f00;
+`;
 
 function App() {
-  const [filters, setFilters] = React.useState({
-    category: "kölsch"
-  });
+  const [filters, setFilters] = React.useState({});
 
   function handleFilterChange(name, value) {
     // Create a copy of filters object
@@ -21,9 +34,9 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header />
-      <main className="main">
+    <AppContainer>
+      <Title />
+      <Main className="main">
         <FilterList
           selectedFilters={filters}
           onFilterChange={handleFilterChange}
@@ -32,8 +45,8 @@ function App() {
           selectedFilters={filters}
           onFilterChange={handleFilterChange}
         />
-      </main>
-    </div>
+      </Main>
+    </AppContainer>
   );
 }
 

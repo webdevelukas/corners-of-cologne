@@ -1,6 +1,16 @@
 import React from "react";
 import Kiosk from "./Kiosk";
 import { kiosks } from "../api/kiosks";
+import styled from "styled-components";
+
+const KiosksListSection = styled.section`
+  background: #0dd;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-top: 15px;
+`;
 
 function KiosksList({ selectedFilters }) {
   console.log(selectedFilters);
@@ -67,11 +77,11 @@ function KiosksList({ selectedFilters }) {
   });
 
   return (
-    <section className="kioskslist">
+    <KiosksListSection className="kioskslist">
       {filteredKiosks.map(kiosk => {
         return <Kiosk key={kiosk.title} kiosk={kiosk} />;
       })}
-    </section>
+    </KiosksListSection>
   );
 }
 
