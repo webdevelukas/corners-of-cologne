@@ -7,6 +7,9 @@ const FilterListSelect = styled.select`
   font-size: 0.8em;
   color: #555;
   margin-left: 1em;
+  ${props =>
+    (props.value && "border: dashed #f20530 1px; background: #f2053010") ||
+    "border: dashed grey 1px;"};
 `;
 
 function Filter({ onChange, filter, selectedValue }) {
